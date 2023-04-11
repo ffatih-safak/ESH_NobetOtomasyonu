@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="https://www.hareketligifler.net/data/media/506/saglik-hareketli-resim-0074.gif" alt="AdminLTELogo" height=120" width="120">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <span class="brand-text font-weight-light">ESH NOBET OTOMASYON</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Departmant/Index" class="nav-link">
+                                <i class="nav-icon fas fa-hospital"></i>
+                                <p>
+                                    Bölümler
+                                    <span class="right badge bg-blue">Departmant</span>
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Doctor/Index" class="nav-link">
+                                <i class="nav-icon fas fa-person-booth"></i>
+                                <p>
+                                    Doktor Kayıt
+                                    <span class="right badge badge-success">Asistan</span>
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Grard/Index" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>
+                                    Liste Oluştur
+                                    <span class="right badge badge-warning">Nöbet</span>
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Grard/Index" class="nav-link">
+                                <i class="nav-icon fas fa-list"></i>
+                                <p>
+                                    Nöbet Listesi
+                                    <span class="right badge badge-light">Geçmiş</span>
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Authority/Index" class="nav-link">
+                                <i class="nav-icon fas fa-eraser"></i>
+                                <p>
+                                    Nöbet Pasif
+                                    <span class="right badge badge-danger">Pasif</span>
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        @RenderBody()
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2023 - Hastane Nöbet Otomasyonu</strong>
+            Tüm Hakları Saklıdır.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="~/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/AdminLTE-3.2.0/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>$.widget.bridge('uibutton', $.ui.button)</script>
+    <!-- Bootstrap 4 -->
+    <script src="~/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/AdminLTE-3.2.0/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="~/AdminLTE-3.2.0/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/AdminLTE-3.2.0/plugins/moment/moment.min.js"></script>
+    <script src="~/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/AdminLTE-3.2.0/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE-3.2.0/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/AdminLTE-3.2.0/dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
+
+
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $("select").select2();
+        });
+
+
+        $('.lepistaDataTable').dataTable({
+
+            "responsive": true,
+
+            "dom": '<"html5buttons"B>lTfgitp',
+
+            "language": {
+
+                "emptyTable": "Gösterilecek veri yok.",
+
+                "processing": "Veriler yükleniyor",
+
+                "sDecimal": ".",
+
+                "sInfo": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+
+                "sInfoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
+
+                "sInfoPostFix": "",
+
+                "sInfoThousands": ".",
+
+                "sLengthMenu": "Sayfada _MENU_ kayıt göster",
+
+                "sLoadingRecords": "Yükleniyor...",
+
+                "sSearch": "Ara:",
+
+                "sZeroRecords": "Eşleşen kayıt bulunamadı",
+
+                "oPaginate": {
+
+                    "sFirst": "İlk",
+
+                    "sLast": "Son",
+
+                    "sNext": "Sonraki",
+
+                    "sPrevious": "Önceki"
+
+                },
+
+                "oAria": {
+
+                    "sSortAscending": ": artan sütun sıralamasını aktifleştir",
+
+                    "sSortDescending": ": azalan sütun sıralamasını aktifleştir"
+
+                },
+
+                "select": {
+
+                    "rows": {
+
+                        "_": "%d kayıt seçildi",
+
+                        "0": "",
+
+                        "1": "1 kayıt seçildi"
+
+                    }
+
+                }
+
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF49F794-6AD4-494D-B063-355C7E1BF5CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESH_DataAccess</RootNamespace>
+    <AssemblyName>ESH_DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Concrete\DefaultConnection.cs" />
+    <Compile Include="Concrete\Repository.cs" />
+    <Compile Include="Migrations\202304100733225_DoctorStatus.cs" />
+    <Compile Include="Migrations\202304100733225_DoctorStatus.designer.cs">
+      <DependentUpon>202304100733225_DoctorStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304101113376__depHost.cs" />
+    <Compile Include="Migrations\202304101113376__depHost.Designer.cs">
+      <DependentUpon>202304101113376__depHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304101222050_grardList.cs" />
+    <Compile Include="Migrations\202304101222050_grardList.Designer.cs">
+      <DependentUpon>202304101222050_grardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304101239142_grardListMonth.cs" />
+    <Compile Include="Migrations\202304101239142_grardListMonth.Designer.cs">
+      <DependentUpon>202304101239142_grardListMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304110540580_DepartmanHospitalTotal.cs" />
+    <Compile Include="Migrations\202304110540580_DepartmanHospitalTotal.designer.cs">
+      <DependentUpon>202304110540580_DepartmanHospitalTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304111146345_Authority.cs" />
+    <Compile Include="Migrations\202304111146345_Authority.Designer.cs">
+      <DependentUpon>202304111146345_Authority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202304100733225_DoctorStatus.resx">
+      <DependentUpon>202304100733225_DoctorStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304101113376__depHost.resx">
+      <DependentUpon>202304101113376__depHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304101222050_grardList.resx">
+      <DependentUpon>202304101222050_grardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304101239142_grardListMonth.resx">
+      <DependentUpon>202304101239142_grardListMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304110540580_DepartmanHospitalTotal.resx">
+      <DependentUpon>202304110540580_DepartmanHospitalTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304111146345_Authority.resx">
+      <DependentUpon>202304111146345_Authority.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESH_Entity\ESH_Entity.csproj">
+      <Project>{0380e12a-fd9b-49bf-a3f1-292d66c7e78e}</Project>
+      <Name>ESH_Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
